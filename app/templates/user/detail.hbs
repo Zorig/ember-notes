@@ -1,0 +1,14 @@
+<h4>{{model.name}}</h4>
+<p>{{model.bio}}</p>
+<span>Followers: {{model.followers}}</span>
+<span>Following: {{model.following}}</span>
+{{#if isPictureHide}}
+  <div class="image">
+    <button {{action 'togglePicture'}}>Зураг</button>
+  </div>
+{{else}}
+<div class="image">
+  <button {{action 'togglePicture'}}>Нуух</button><br/>
+  <img src="{{model.avatar_url}}" alt="{{model.name}}"/>
+</div>
+{{/if}}
